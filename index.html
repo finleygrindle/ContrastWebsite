@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <title>Green Bean</title>
+
+    <style>
+        .navbar-brand {
+            transform: translateX(-50%);
+            padding-left: 370px;
+            position: absolute;
+        }
+
+        .navbar {
+          background-color: #ffffff;
+          color: #141414;
+          position:fixed;
+          width:100%;
+          height:7%;
+          z-index: 1000000;
+          top:0;
+        }
+
+        .nav-link {
+          color: #F8F3E7;
+        }
+
+        .nav-item1 {
+          padding-right: 50px;
+        }
+
+        .nav-item2 {
+          padding-left: 50px;
+        }
+
+        .navbar-toggler {
+          margin-left: auto;
+          color: #141414;
+          border: none;
+        }
+
+        .navbar-toggler-icon {
+          color: #F8F3E7;
+        }
+
+        .container1-fluid {
+          background-color: #141414;
+          color: #F8F3E7;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .container2-fluid {
+          background-color: #141414;
+          color: #F8F3E7;
+          text-align: center;
+          padding: 20px;
+          padding-top: 100px;
+        }
+
+        .btn {
+          background-color: #F8F3E7!important;
+          color: #313131!important;
+          border-radius: 25px;
+        }
+    </style>
+</head>
+
+    <body>
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid" class="img-fluid" alt="...">
+              <a class="navbar-brand" hrefa="#">
+                <img src="images/contrastlogo.png" alt="Bootstrap" width="350" onclick="window.location.href='index.html'">
+              </a>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <p>
+                  History
+                </p>
+              </button>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <p>
+                  No Contrast
+                </p>
+              </button>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <p>
+                  Bibliography
+                </p>
+              </button>
+
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="window.location.href='menu.html'">Todays Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="window.location.href='member.html'">Become a Member</a>
+                </li>
+              </div>
+            </div>
+        </nav>
+
+        <div class="container2-fluid">
+            <h1 class="display-3">Here at Green Bean, we care about the planet.</h1>
+            <p>
+                See our menu and become sustainable today!
+            </p>
+
+            <button type="button" class="btn" onclick="window.location.href='menu.html'">Todays Menu</button>
+
+            <hr>
+        </div>
+
+        <div class="container1-fluid">
+          <h1 class="display-3">Become a Member Today!</h1>
+          <p>
+              Fill out this form to receive exclusive discounts for members only
+          </p>
+
+          <button type="button" class="btn" onclick="window.location.href='member.html'">Become a Member</button>
+
+          <hr>
+        </div>
+
+        <div class="container1-fluid">
+          <h1 class="display-3">Green Bean Food Boxes</h1>
+          <p>
+              View our map to see drop off points for our weekly pay-as-you-feel food boxes!
+          </p>
+          
+          <button type="button" class="btn" onclick="window.location.href='map.html'">Map</button>
+
+        <button type="button" class="btn" onclick="window.location.href='foodbox.html'">Reserve a Food Box</button>
+
+          <hr>
+        </div>
+
+        <div class="container1-fluid">
+          <h1 class="display-3">About</h1>
+          <p>
+            Founded in 2021, Green Bean is a nonprofit organisation with a passion for our earth. We are working daily to combat food waste in the local area, with aspirations to reach a global scale. Our restaurant is pay as you feel, featuring cost efficient daily menus consisting of
+            diverted fresh food from local supermarkets and distributors. We are targeted towards students and young families in need of a well-priced, healthy meal. Despite this, our door is always open to anyone with a devotion for saving our planet!
+          </p>
+
+          <hr>
+        </div>
+
+        <div class="container1-fluid">
+          <footer>
+            <ul class="nav justify-content-center">
+              <p class="nav-item1">12345 6789</a></li>
+              <p class="nav-item2">Park Street, Bristol</a></li>
+            </ul>
+          </footer>
+        </div>
+        
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
