@@ -110,6 +110,42 @@
 </head>
 
     <body>
+        <script> 
+          function changeImage()
+            {
+              var img = document.getElementById("image");
+              img.src="images/contrast6.png";
+              return false;
+            }
+        </script>
+
+        <script> 
+          function returnImage()
+            {
+              var img = document.getElementById("image");
+              img.src="images/contrast5.png";
+              return false;
+            }
+        </script>
+
+        <script> 
+          function changeImage1()
+            {
+              var img = document.getElementById("image1");
+              img.src="images/contrast7.png";
+              return false;
+            }
+        </script>
+
+        <script> 
+          function returnImage1()
+            {
+              var img = document.getElementById("image1");
+              img.src="images/contrast5.png";
+              return false;
+            }
+        </script>
+
         <nav class="navbar navbar-custom">
             <div class="container-fluid" class="img-fluid" alt="...">
               <a class="navbar-brand" hrefa="#">
@@ -146,10 +182,10 @@
               </div>
             </div>
             <div class="article">
-              <img src="images/contrast1.png" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
+              <img id="image" src="images/contrast5.png" onmouseover="changeImage()" onmouseleave="returnImage()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
             </div>
             <div class="article">
-              <img src="images/contrast2pink.png" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
+              <img id="image1" src="images/contrast5.png" onmouseover="changeImage1()" onmouseleave="returnImage1()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
             </div>
             <div class="article">
               <h1>How to Avoid a Lack of Contrast</h1>
