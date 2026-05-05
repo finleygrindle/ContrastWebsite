@@ -27,10 +27,6 @@
           color: #ffffff;
         }
 
-        .navbar-toggler-icon {
-          color: #ffffff;
-        }
-
         .container1-fluid {
           background-color: #141414;
           color: #ffffff;
@@ -99,11 +95,39 @@
           box-sizing: border-box;
         }
 
+        @keyframes fadeInUp {
+          0% {
+            transform: translateY(1%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0%);
+            opacity: 1;
+          }
+        }
+
+        .fadeInUp-animation {
+          animation: 1.5s fadeInUp; /* When screen loads, fade in the content in the article container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .fadeIn-animation {
+          animation: 1.5s fadeIn; /* When screen loads, fade in the content in the navbar container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
     </style>
 </head>
 
     <body>
-        <nav class="navbar navbar-custom">
+        <nav class="navbar navbar-custom fadeIn-animation">
             <div class="container-fluid" class="img-fluid" alt="...">
               <a class="navbar-brand" hrefa="#">
                 <img src="images/contrastlogo.png" alt="Bootstrap" width="300" onclick="window.location.href='index.html'">
@@ -120,7 +144,7 @@
         </nav>
 
         <div class="container2-fluid">
-          <div class="article-container">
+          <div class="article-container fadeInUp-animation">
             <div class="article">
               <h1>History of Typography</h1>
               <div class="article1">

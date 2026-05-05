@@ -27,10 +27,6 @@
           color: #ffffff;
         }
 
-        .navbar-toggler-icon {
-          color: #ffffff;
-        }
-
         .container1-fluid {
           background-color: #141414;
           color: #ffffff;
@@ -99,6 +95,34 @@
           box-sizing: border-box;
         }
 
+        @keyframes fadeInUp {
+          0% {
+            transform: translateY(1%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0%);
+            opacity: 1;
+          }
+        }
+
+        .fadeInUp-animation {
+          animation: 1.5s fadeInUp; /* When screen loads, fade in the content in the article container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .fadeIn-animation {
+          animation: 1.5s fadeIn; /* When screen loads, fade in the content in the navbar container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
     </style>
 </head>
 
@@ -106,8 +130,8 @@
         <script> 
           function changeImage()
             {
-              var img = document.getElementById("image");
-              img.src="images/contrast7.png";
+              var img = document.getElementById("image"); /* Assign the id "image" to the image that needs to change */
+              img.src="images/contrast7.png"; /* When function changeImage is ran, change image source to new photo */
               return false;
             }
         </script>
@@ -116,7 +140,7 @@
           function returnImage()
             {
               var img = document.getElementById("image");
-              img.src="images/contrast5.png";
+              img.src="images/contrast5.png"; /*When changeImage is not ran, run returnImage to revert the image back it its original source */
               return false;
             }
         </script>
@@ -139,7 +163,7 @@
             }
         </script>
 
-        <nav class="navbar navbar-custom">
+        <nav class="navbar navbar-custom fadeIn-animation">
             <div class="container-fluid" class="img-fluid" alt="...">
               <a class="navbar-brand" hrefa="#">
                 <img src="images/contrastlogo.png" alt="Bootstrap" width="300" onclick="window.location.href='index.html'">
@@ -156,7 +180,7 @@
         </nav>
 
         <div class="container2-fluid">
-          <div class="article-container">
+          <div class="article-container fadeInUp-animation">
             <div class="article">
               <h4>+‎ ‎ ‎ ‎ ‎ Hover over (Figure 7) to see without contrast</h4>
               <h1>Issues With a Lack of Contrast</h1>
@@ -185,13 +209,13 @@
               </div>
             </div>
             <div class="article">
-              <img id="image" src="images/contrast5.png" onmouseover="changeImage()" onmouseleave="returnImage()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
+              <img id="image" src="images/contrast5.png" onmouseover="changeImage()" onmouseleave="returnImage()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700"> <!-- When mouse hovers over the image run changeImage function, when it leaves the image run the returnImage function -->
               <div class="article2">
                 <h5><br>Figure 7</h5>
               </div>
             </div>
             <div class="article">
-              <img id="image1" src="images/contrast5.png" onmouseover="changeImage1()" onmouseleave="returnImage1()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
+              <img id="image1" src="images/contrast5.png" onmouseover="changeImage1()" onmouseleave="returnImage1()" class="img-fluid mx-auto d-block" alt="Responsive image" width="700"> !-- When mouse hovers over the image run changeImage function, when it leaves the image run the returnImage function -->
               <div class="article2">
                 <h5><br>Figure 8</h5>
               </div>

@@ -27,20 +27,6 @@
           color: #ffffff;
         }
 
-        .nav-item1 {
-          padding-right: 50px;
-        }
-
-        .nav-item2 {
-          padding-left: 50px;
-        }
-
-        
-
-        .navbar-toggler-icon {
-          color: #ffffff;
-        }
-
         .container1-fluid {
           background-color: #141414;
           color: #ffffff;
@@ -109,17 +95,44 @@
           box-sizing: border-box;
         }
 
+        @keyframes fadeInUp {
+          0% {
+            transform: translateY(1%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0%);
+          }
+        }
+
+        .fadeInUp-animation {
+          animation: 1.5s fadeInUp; /* When screen loads, fade in the content in the article container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .fadeIn-animation {
+          animation: 1.5s fadeIn; /* When screen loads, fade in the content in the navbar container (code found from: https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m) */
+        }
+
     </style>
 </head>
 
     <body>
-        <nav class="navbar navbar-custom">
+        <nav class="navbar navbar-custom fadeIn-animation"> <!-- Create container for contents within the navbar -->
             <div class="container-fluid" class="img-fluid" alt="...">
               <a class="navbar-brand" hrefa="#">
-                <img src="images/contrastlogo.png" alt="Bootstrap" width="300" onclick="window.location.href='index.html'">
+                <img src="images/contrastlogo.png" alt="Bootstrap" width="300" onclick="window.location.href='index.html'"> <!-- Add the website logo with a width of 300 -->
               </a>
               
-              <a class="rightnav" class="img-fluid" alt="...">
+              <a class="rightnav" class="img-fluid" alt="..."> <!-- Create links to other pages using the rightnav class to ensure they are aligned to the right of the navbar -->
                 <button type="button" class="links" onclick="window.location.href='history.html'">History</button>
   
                 <button type="button" class="links" onclick="window.location.href='nocontrast.html'">No Contrast</button>
@@ -129,9 +142,9 @@
             </div>
         </nav>
 
-        <div class="container2-fluid">
-          <div class="article-container">
-            <div class="article">
+        <div class="container2-fluid"> <!-- Container for all the primary content of the site -->
+          <div class="article-container fadeInUp-animation">
+            <div class="article"> <!-- Define the first column of information -->
               <h1>Contrast Through Dimensionality</h1>
               <div class="article1">
                 <h5>An effective, yet lesser-known way to manipulate a graphic space when working with typography is to 
@@ -165,7 +178,7 @@
               </div>
             </div>
             <div class="article">
-              <img src="images/contrast1.png" class="img-fluid mx-auto d-block" alt="Responsive image" width="700">
+              <img src="images/contrast1.png" class="img-fluid mx-auto d-block" alt="Responsive image" width="700"> <!-- Define the second column, an image with a width of 700 -->
               <div class="article2">
                 <h5><br>Figure 1</h5>
               </div>
@@ -277,10 +290,10 @@
           </div>
         </div>
 
-        <div class="container1-fluid">
+        <div class="container1-fluid"> <!-- Footer container for the logo icon -->
           <footer>
             <ul class="nav justify-content-center">
-              <img src="images/contrasticonwhite.png" alt="Bootstrap" width="45" onclick="window.location.href='index.html'">
+              <img src="images/contrasticonwhite.png" alt="Bootstrap" width="45" onclick="window.location.href='index.html'"> <!-- Add the logo icon with a width of 45 and aligned to the centre -->
             </ul>
           </footer>
         </div>
